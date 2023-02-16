@@ -1,7 +1,9 @@
 from telegram import Bot
+import os
 
-TOKEN = '6211504952:AAF8iflnUWQOXHPpDTTu9BFOCbAxeQxuR00'
-CHAT_ID = '-1001868103348'
+# Get environment variables
+TOKEN = os.environ.get('TOKEN')
+CHAT_ID = os.environ.get('CHAT_ID')
 
 async def enviar_mensagem(msg:str):
     bot = Bot(token=TOKEN)
